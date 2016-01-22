@@ -190,8 +190,11 @@ public class MaterialMenuDrawable extends Drawable implements Animatable {
     public MaterialMenuDrawable(Context context, int color, Stroke stroke, int transformDuration) {
         this(context, color, stroke, DEFAULT_SCALE, transformDuration);
     }
+    public MaterialMenuDrawable(Context context, int color, Stroke stroke, float scale) {
+        this(context, color, stroke, scale,DEFAULT_TRANSFORM_DURATION);
+    }
 
-    public MaterialMenuDrawable(Context context, int color, Stroke stroke, int scale, int transformDuration) {
+    public MaterialMenuDrawable(Context context, int color, Stroke stroke, float scale, int transformDuration) {
         Resources resources = context.getResources();
         // convert each separately due to various densities
         this.dip1 = dpToPx(resources, 1) * scale;
